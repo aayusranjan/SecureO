@@ -1,15 +1,3 @@
-/*
-
-Fonts
-
-*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
-
-/*
- 
-Variables
-
-*/
 
 :root {
   /* dark shades of primary color*/
@@ -52,6 +40,10 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
+  /* for button or home section */
+  --purple:#814096;
+  --pink:#F83292;
+  --gradient:linear-gradient(90deg, var(--purple), var(--pink));
 }
 /*
 
@@ -66,6 +58,12 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
+html{
+    font-size: 80%;
+    overflow-x: hidden;
+}
+
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-grey-10);
@@ -73,12 +71,7 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
 }
-ul {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-}
+
 h1,
 h2,
 h3,
@@ -156,6 +149,14 @@ main {
 Navbar
 
 */
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 nav {
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
@@ -230,6 +231,7 @@ nav {
   .links a {
     padding: 0;
     margin: 0 0.5rem;
+    font-size: 16px;
   }
   .links a:hover {
     padding: 0;
@@ -259,10 +261,79 @@ nav {
 .sticky + .content{
   padding: 60px;
 }
+/* Home section */
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+}
+
+*::selection{
+    background:var(--pink);
+    color:#fff;
+}
+
+
+body{
+    background:#f9f9f9;
+}
+
+section{
+    min-height: 100vh;
+    padding:0 9%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    border-radius: 5rem;
+    background:var(--gradient);
+    font-size: 1.7rem;
+    color:#fff;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    transition: all .3s linear;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content h3{
+    font-size: 5.5rem;
+    color:#333;
+    text-transform: uppercase;
+  
+}
+
+.home .content h3 span{
+    color:blueviolet;
+    text-transform: uppercase;
+}
+
+.home .content p{
+    font-size: 1.7rem;
+    color:#666;
+    padding:1rem 0;
+}
 
 /* footer */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body{
 	line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
